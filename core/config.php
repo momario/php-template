@@ -2,10 +2,10 @@
 class config {
 
     //CUSTOM
-    static $url_second_url = '/template/main/second';
-    static $url_third_url = '/template/alternate/third';
-    static $url_fourth_url = '/template/main/fourth';
-    static $url_fifth_url = '/template/main/fifth';
+    static $url_second_url = '/php-template-master/main/second';
+    static $url_third_url = '/php-template-master/alternate/third';
+    static $url_fourth_url = '/php-template-master/main/fourth';
+    static $url_fifth_url = '/php-template-master/main/fifth';
 
     //GLOBAL
     static $project_title = 'Template';
@@ -14,8 +14,8 @@ class config {
     static $file_path = 'files/';
 
     //URL
-    static $url_folder_name = 'template';
-    static $url_base_url = '/template/main/home';
+    static $url_folder_name = 'php-template-master';
+    static $url_base_url = '/php-template-master/main/home';
 
     //DATABASE
     static $database_server = 'localhost';
