@@ -1,14 +1,14 @@
 <?php
 /**
- * 	//HOW TO USE:
- *  $test = database::get('TABLE_NAME');
- *  //FUNCTION WHERE DOES NOT WORK WITHOUT GET. GET SELECTS THE TABLE
- * 	$test2 = database::where('id',1); 
- * 	echo $test2->ROW_NAME;
- *  //WITH GET, ITERATE OVER ALL ROWS
- *  foreach($test as $row) {
- *      echo $row->VALUE;
- *  }
+ * HOW TO USE:
+ * With function `database::get()`, you can iterate over all rows
+ * $test = database::get('table_name');
+ * foreach($test as $row) {
+ *     echo $row->col_name;
+ * } 
+ * With function `database::where()`, you can get a single row
+ * $test2 = database::where('id',1); 
+ * echo $test2->col_name;
  */
 class database {
 
