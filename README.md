@@ -33,3 +33,11 @@ Not finished, but working.<br />
 The URL router is accessing the class and function and optionally gives a variable to a function.<br />
 URL: /template/class_name/function_name/variable_name<br />
 If a not allowed URL is typed in, it redirects to your `config::$url_base_url`<br />
+
+## TODO
+* config custom URL below URL
+* config folder name as variable in other URL (only one point for change)
+* URL explode 6 == error
+* more examples, like table with php server data and form handling
+* all examples in an examples controller
+* js console log and an Ajax example, by button onclick
