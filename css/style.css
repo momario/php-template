@@ -1,0 +1,31 @@
+/*GLOBAL*/
+body {
+    margin:0px;
+    padding:0px;
+    background:#333333;
+    color:white;
+    font-family:Arial;
+	font-size:12px;
+}
+
+/*DIV AREAS*/
+#navigation {
+    width:100%;
+    background:#333333;
+    border-bottom:2px solid black;
+}
+
+/*LINKS AND BUTTONS*/
+a {
+    display:inline-block;
+    min-width:100px;
+    background:white;
+    color:black;
+    padding:0px 5px;
+    border:1px solid black;
+    text-decoration:none;
+}
+a:hover {
+    background:gray;
+    color:white;
+}
