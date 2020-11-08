@@ -7,12 +7,17 @@ simple and easy to use php template
 * access the page from your browser: server_name/template
 * that's it! :rofl:
 
-## Usage
-For making your own changes, just access the core/config.php file
+## Config
+**core/config.php**
 <br />
-This is the file, where all the global variables are stored
+All the global variables are stored in this file and can be acessed from everywhere.
+<br />
+For example: add this code to your home view `<?php echo config::$url_base_url ?>`
+
 
 ## Database
+**core/database.php**
+<br />
 With function `database::get()`, you can iterate over all rows
 
     $test = database::get('table_name');
