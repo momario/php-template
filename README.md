@@ -2,9 +2,9 @@
 simple and easy to use php template.
 
 ## Installation
-* copy the template folder into your workspace
+* copy the php-template-master folder into your workspace
 * run your webserver
-* access the page from your browser: server_name/template
+* access the page from your browser: server_name/php-template-master
 * that's it! :rofl:
 
 ## Config

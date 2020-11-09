@@ -31,8 +31,8 @@ class database {
     //GET ALL TABLE ENTRIES, SET GLOBAL OBJECT, RETURN GLOBAL OBJECT
     public function get($table) {
         $array = array();
-        $order = config::$database_order;
-        $sql = "SELECT * FROM $table ORDER BY $order";
+        $database_order_by = config::$database_order_by;
+        $sql = "SELECT * FROM $table ORDER BY $database_order_by";
         $query = mysqli_query(database::connect(),$sql);
         while($row = mysqli_fetch_assoc($query)) {
             array_push($array,(object) $row);

@@ -2,8 +2,8 @@
 body {
     margin:0px;
     padding:0px;
-    background:#333333;
-    color:white;
+    background:lightgrey;
+    color:black;
     font-family:Arial;
 	font-size:12px;
 }
@@ -11,17 +11,16 @@ body {
 /*DIV AREAS*/
 #navigation {
     width:100%;
-    background:#333333;
-    border-bottom:2px solid black;
+    background:black;
 }
 
 /*LINKS AND BUTTONS*/
 a {
     display:inline-block;
     min-width:100px;
+    padding:0px 5px;
     background:white;
     color:black;
-    padding:0px 5px;
     border:1px solid black;
     text-decoration:none;
 }

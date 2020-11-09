@@ -1,1 +1,1 @@
-/*alert('it works');*/
+console.log('main.js loaded and working');
