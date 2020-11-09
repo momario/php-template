@@ -1,12 +1,6 @@
 <?php
 class config {
 
-    //CUSTOM
-    static $url_second_url = '/php-template-master/main/second';
-    static $url_third_url = '/php-template-master/alternate/third';
-    static $url_fourth_url = '/php-template-master/main/fourth';
-    static $url_fifth_url = '/php-template-master/main/fifth';
-
     //GLOBAL
     static $project_title = 'Template';
 
@@ -14,8 +8,12 @@ class config {
     static $file_path = 'files/';
 
     //URL
+    #static $url_main = '/'.$url_folder_name.'/main/home';
+    #NOT POSSIBLE, BECAUSE STATIC VARIABLES NEED CONSTANT VALUES
+    #A _construct FUNCTION WOULD BE NEEDED INSTEAD
     static $url_folder_name = 'php-template-master';
-    static $url_base_url = '/php-template-master/main/home';
+    static $url_main = '/php-template-master/main/home';
+    static $url_base = '/php-template-master/';
 
     //DATABASE
     static $database_server = 'localhost';
