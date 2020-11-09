@@ -4,9 +4,6 @@ class config {
     //GLOBAL
     static $project_title = 'Template';
 
-    //FILES
-    static $file_path = 'files/';
-
     //URL
     #static $url_main = '/'.$url_folder_name.'/main/home';
     #NOT POSSIBLE, BECAUSE STATIC VARIABLES NEED CONSTANT VALUES
@@ -21,6 +18,10 @@ class config {
     static $database_secret = '';
     static $database_database = 'database_name';
     static $database_order_by = 'id';
+
+    //PATH
+    static $path_files = 'files/';
+    static $path_controller = 'controller/';
 
 }//END
 ?>

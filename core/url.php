@@ -26,7 +26,8 @@ class url {
                 if($url_path_element_count >= 1 AND $url_explode[1] == config::$url_folder_name) {
                     #echo 'check - project exists<br>'; //TROUBLESHOOTING
 					if($url_path_element_count >= 2) { //CHECK ARRAY COUNT
-						$file = $url_explode[2] . '.php'; //ADD .php EXTENSION
+						//$file = controller/filename.php
+						$file = config::$path_controller.$url_explode[2] . '.php'; //ADD .php EXTENSION
 						if(file_exists($file)) {
 							if(include($file)) {
 								#echo 'check - controller file exists<br>'; //TROUBLESHOOTING

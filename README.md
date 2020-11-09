@@ -1,17 +1,17 @@
-# php-template
-simple and easy to use php template.
+# php-template-master
+Simple and easy to use php template.
 
-## Installation
+## INSTALLATION
 * copy the php-template-master folder into your workspace
 * run your webserver
 * access the page from your browser: server_name/php-template-master
 * that's it! :rofl:
 
-## Config
+## CONFIG
 **core/config.php**<br />
 All the global variables are stored in this file and can be acessed from everywhere.<br />
 
-## Database
+## DATABASE
 **core/database.php**<br />
 With function `database::get()`, you can iterate over all rows.
 
@@ -30,3 +30,7 @@ With function `database::where()`, you can get a single row.
 The URL router is accessing the class and function and optionally gives a variable to a function.<br />
 URL: /php-template-master/class_name/function_name/variable_name<br />
 If a not allowed URL is typed in, it redirects to your `config::$url_main`<br />
+
+## SECURITY
+**.htaccess**<br />
+Page forced to use HTTPS and access to folders and hidden files denied.<br />

@@ -14,8 +14,8 @@ class database {
 
     static $object;
 
-    //CAST GLOBAL VARIABLE TO OBJECT
     function __construct() {
+        //CAST GLOBAL VARIABLE TO OBJECT
         database::$object = (object) database::$object;
     }//END
 
@@ -41,7 +41,7 @@ class database {
         return database::$object;
     }//END
 
-    //RETURN MATCH AS GLOBAL OBJECT
+    //RETURN MATCH AS OBJECT
     public function where($key,$value) {
         $return = false;
         foreach(database::$object as $row) {
