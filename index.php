@@ -3,6 +3,7 @@
 include('core/config.php');
 include('core/url.php');
 include('core/database.php');
+
 ?>
 <html>
 	<head>
