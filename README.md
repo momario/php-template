@@ -10,8 +10,6 @@ simple and easy to use php template.
 ## Config
 **core/config.php**<br />
 All the global variables are stored in this file and can be acessed from everywhere.<br />
-For example: add this code to your home view `<?php echo config::$url_base_url ?>`
-
 
 ## Database
 **core/database.php**<br />
@@ -29,7 +27,6 @@ With function `database::where()`, you can get a single row.
 
 ## URL
 **core/url.php**<br />
-Not finished, but working.<br />
 The URL router is accessing the class and function and optionally gives a variable to a function.<br />
-URL: /template/class_name/function_name/variable_name<br />
-If a not allowed URL is typed in, it redirects to your `config::$url_base_url`<br />
+URL: /php-template-master/class_name/function_name/variable_name<br />
+If a not allowed URL is typed in, it redirects to your `config::$url_main`<br />

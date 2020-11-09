@@ -5,26 +5,57 @@ body {
     background:lightgrey;
     color:black;
     font-family:Arial;
-	font-size:12px;
+    font-size:12px;
 }
 
 /*DIV AREAS*/
 #navigation {
     width:100%;
-    background:black;
+    background:gray;
+    border-bottom: 1px solid black;
 }
 
 /*LINKS AND BUTTONS*/
-a {
+a,
+table input[type="submit"] {
     display:inline-block;
     min-width:100px;
     padding:0px 5px;
     background:white;
     color:black;
-    border:1px solid black;
     text-decoration:none;
 }
-a:hover {
+a:hover,
+table input[type="submit"]:hover {
     background:gray;
     color:white;
+}
+
+/*TABLES*/
+table {
+    margin:5px;
+    background:black;
+}
+table th {
+    margin:0px;
+    padding:0px 5px;
+    background: #333333;
+    color:white;
+    text-align: left;
+}
+table td {
+    margin:0px;
+    padding:0px;
+    background: white;
+    color:black;
+    text-align: left;
+}
+table input,
+table select {
+    margin:0px;
+    padding:0px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border:none;
 }
