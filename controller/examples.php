@@ -1,7 +1,7 @@
 <?php
 class examples extends app {
 
-	public function form_table() {
+	public function form() {
 		if(empty($_POST['name'])) {
 			$name = 'Musterman';
 		} else {
@@ -17,10 +17,30 @@ class examples extends app {
 		} else {
 			$country = $_POST['country'];
 		}
+		include_once('view/head.php');
+		include_once('view/navigation.php');
+		include_once('view/form.php');
+	}//END
 
-		include('views/navigation.php');
-		include('views/form_table.php');
-    }//END
+	public function ajax_load() {
+		$data = array();
+		if(empty($_POST['name'])) {
+			$data['name'] = 'Musterman';
+		} else {
+			$data['name'] = $_POST['name'];
+		}
+		if(empty($_POST['firstname'])) {
+			$data['firstname'] = 'Max';
+		} else {
+			$data['firstname'] = $_POST['firstname'];
+		}
+		if(empty($_POST['country'])) {
+			$data['country'] = 'North Pole';
+		} else {
+			$data['country'] = $_POST['country'];
+		}
+		echo json_encode($data);
+	}//END
 
 }//END
 ?>

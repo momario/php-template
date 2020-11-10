@@ -2,10 +2,9 @@
 class main extends app {
 
 	public function home() {
-		include('views/navigation.php');
-		echo 'Hello World!';
-		echo '<br>';
-		echo 'The navigation redirects to the examples.';
+		include_once('view/head.php');
+		include_once('view/navigation.php');
+		include_once('view/home.php');
 	}//END
 
 	//FOR A NEW VIEW, SIMPLAY CREATE A NEW PUBLIC FUNCTION

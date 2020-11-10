@@ -1,27 +1,16 @@
-<!DOCTYPE html>
 <?php
-include('core/config.php');
-include('core/url.php');
-include('core/database.php');
+require_once('core/config.php');
+require_once('core/url.php');
+require_once('core/database.php');
+
+class app {
+
+	public function run() {
+		url::run();
+	}//END
+
+}//END
+
+//RUN THE APPLICATION
+app::run();
 ?>
-<html>
-	<head>
-		<title><?php echo config::$project_title; ?></title>
-		<link rel="stylesheet" href="<?php echo '/'.config::$url_folder_name.'/css/style.css'; ?>">
-		<script type="text/javascript" src="<?php echo '/'.config::$url_folder_name.'/js/main.js'; ?>"></script>
-	</head>
-	<body>
-		<?php
-		class app {
-
-			public function run() {
-				url::run();
-			}//END
-
-		}//END
-
-		//run the application
-		app::run();
-		?>
-	</body>
-</html>
