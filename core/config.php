@@ -20,7 +20,7 @@ class config {
     static $database_order_by = 'id';
 
     //PATH
-    static $path_files = 'files/';
+    static $path_file = 'file/';
     static $path_controller = 'controller/';
 
 }//END
