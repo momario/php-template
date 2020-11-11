@@ -20,7 +20,7 @@ RedirectMatch 403 /\..*$
     RewriteRule (^|/)controller(/|$) - [F]
     RewriteRule (^|/)core(/|$) - [F]
     #RewriteRule (^|/)css(/|$) - [F]
-    RewriteRule (^|/)files(/|$) - [F]
+    RewriteRule (^|/)file(/|$) - [F]
     #RewriteRule (^|/)js(/|$) - [F]
-    RewriteRule (^|/)views(/|$) - [F]
+    RewriteRule (^|/)view(/|$) - [F]
 </IfModule>
