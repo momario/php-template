@@ -5,9 +5,6 @@ class config {
     public static $project_title = 'Template';
 
     //URL
-    #static $url_main = '/'.$url_folder_name.'/main/home';
-    #NOT POSSIBLE, BECAUSE STATIC VARIABLES NEED CONSTANT VALUES
-    #A _construct FUNCTION WOULD BE NEEDED INSTEAD
     public static $url_folder_name = 'php-template-master';
     public static $url_main = '/php-template-master/main/home';
     public static $url_base = '/php-template-master/';

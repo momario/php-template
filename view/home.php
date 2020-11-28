@@ -1,5 +1,5 @@
 <div id="home">
     Hello World!
     <br>
-    The navigation redirects to the examples.
+    <a id="ajax_button" href="<?php echo config::$url_base.'main/buttton_ajax'; ?>">Click me!</a>
 </div>

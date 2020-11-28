@@ -1,14 +1,14 @@
 console.log('main.js loaded and working');
 
-//ajax test
+//AJAX TEST
 $(document).ready(function(){
 
-    //NOT WORKING
-    $("#example_ajax").submit(function(ev){
-        ev.preventDefault();
+    //AJAX CONSOLE LOG ON CLICK
+    $("#ajax_button").click(function(e){
+        e.preventDefault();
         $.ajax({
             type: 'get',
-            url: $('#example_ajax').attr('formaction'),
+            url: $('#ajax_button').attr('href'),
             dataType: 'json',
             beforeSend: function(){
                 console.log('ajax send');
@@ -16,13 +16,9 @@ $(document).ready(function(){
             success: function(data){
                 console.log('ajax success');
                 console.log(data);
-                $('#ajax_name').html(data.name);
             },
             error: function(xhr,error,request){
                 console.log('ajax error');
-                console.log(xhr.responseText);
-                console.log(error);
-                console.log(request.responseText);
             },
             fail: function(){
                 console.log('ajax fail');
@@ -31,6 +27,6 @@ $(document).ready(function(){
                 console.log('ajax complete');
             }
         });
-    });
+    });//END
 
-  });
+  });//END

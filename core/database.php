@@ -1,15 +1,4 @@
 <?php
-/**
- * HOW TO USE:
- * With function `database::get()`, you can iterate over all rows
- * $test = database::get('table_name');
- * foreach($test as $row) {
- *     echo $row->col_name;
- * } 
- * With function `database::where()`, you can get a single row
- * $test2 = database::where('id',1); 
- * echo $test2->col_name;
- */
 class database {
 
     static $object;
@@ -19,6 +8,7 @@ class database {
         $this->$object = (object) $this->$object;
     }//END
 
+    //CONNECT TO DATABASE
     private function connect() {
         $server = config::$database_server;
         $user = config::$database_user;

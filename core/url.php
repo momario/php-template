@@ -1,10 +1,12 @@
 <?php
 class url {
 	
+	//REDIRECT TO LOCATION
 	public function redirect($location) {
 		header("Location: $location");
 	}//END
 	
+	//RUN URL ROUTER
     public function run() {
         $parsed_url = parse_url($_SERVER['REQUEST_URI']);//PARSE URL
         if(isset($parsed_url['path'])) { //CHECK IF PATH ISSET

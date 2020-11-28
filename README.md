@@ -1,11 +1,10 @@
 # php-template-master
-Simple and easy to use php template.
+Simple and easy to use PHP template.
 
 ## INSTALLATION
 * copy the php-template-master folder into your workspace
 * run your webserver
 * access the page from your browser: server_name/php-template-master
-* that's it! :rofl:
 
 ## CONFIG
 **core/config.php**<br />
@@ -33,4 +32,6 @@ If a not allowed URL is typed in, it redirects to your `config::$url_main`<br />
 
 ## SECURITY
 **.htaccess**<br />
-Page forced to use HTTPS and access to folders and hidden files denied.<br />
+* page forced to https
+* access to folders denied
+* access to directories denied

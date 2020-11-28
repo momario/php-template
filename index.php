@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 require('core/config.php');
 require('core/url.php');
 require('core/database.php');
