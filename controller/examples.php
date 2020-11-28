@@ -17,9 +17,9 @@ class examples extends app {
 		} else {
 			$country = $_POST['country'];
 		}
-		include_once('view/head.php');
-		include_once('view/navigation.php');
-		include_once('view/form.php');
+		include('view/head.php');
+		include('view/navigation.php');
+		include('view/form.php');
 	}//END
 
 	public function ajax_load() {

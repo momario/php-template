@@ -1,16 +1,18 @@
-<?php
-require_once('core/config.php');
-require_once('core/url.php');
-require_once('core/database.php');
+<?php declare(strict_types=1);
+require('core/config.php');
+require('core/url.php');
+require('core/database.php');
 
 class app {
 
 	public function run() {
-		url::run();
+		$url = new url();
+		$url->run();
 	}//END
 
 }//END
 
 //RUN THE APPLICATION
-app::run();
+$app = new app();
+$app->run();
 ?>

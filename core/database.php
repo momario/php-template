@@ -16,10 +16,10 @@ class database {
 
     function __construct() {
         //CAST GLOBAL VARIABLE TO OBJECT
-        database::$object = (object) database::$object;
+        $this->$object = (object) $this->$object;
     }//END
 
-    public function connect() {
+    private function connect() {
         $server = config::$database_server;
         $user = config::$database_user;
         $secret = config::$database_secret;
@@ -33,18 +33,18 @@ class database {
         $array = array();
         $database_order_by = config::$database_order_by;
         $sql = "SELECT * FROM $table ORDER BY $database_order_by";
-        $query = mysqli_query(database::connect(),$sql);
+        $query = mysqli_query($this->connect(),$sql);
         while($row = mysqli_fetch_assoc($query)) {
             array_push($array,(object) $row);
         }
-        database::$object = (object) $array; //CAST ARRAY TO OBJECT AND RETURN GLOBAL OBJECT
-        return database::$object;
+        $this->$object = (object) $array; //CAST ARRAY TO OBJECT AND RETURN GLOBAL OBJECT
+        return $this->$object;
     }//END
 
     //RETURN MATCH AS OBJECT
     public function where($key,$value) {
         $return = false;
-        foreach(database::$object as $row) {
+        foreach($this->$object as $row) {
             if($row->$key == $value) {
                 $return = $row;
             }

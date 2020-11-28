@@ -14,7 +14,7 @@ class url {
             OR isset($parsed_url['user'])
             OR isset($parsed_url['query'])
             OR isset($parsed_url['fragment']) ) {
-                url::redirect(config::$url_main); die('Function Error');
+                $this->redirect(config::$url_main); die('Function Error');
             } else {
                 $url_path = $parsed_url['path'];
                 $url_explode = explode('/',$url_path);
@@ -44,20 +44,20 @@ class url {
 										} else {
 											if($url_path_element_count == 6 AND isset($url_explode[5])) {
 												#echo 'error - '.$url_path_element_count.' '.$url_explode[5]; //TROUBLESHOOTING
-												url::redirect(config::$url_main); die('Function Error');
+												$this->redirect(config::$url_main); die('Function Error');
 											} else {
 												//LOAD FUNCTION WITHOUT INPUT VARIABLE
 												$this_class->{$function_name}();
 											}
 										}
-									} else { url::redirect(config::$url_main); die('Function Error'); }
-								} else {url::redirect(config::$url_main); die('Function Error'); }
-							} else { url::redirect(config::$url_main); die('Function Error'); }
-						} else { url::redirect(config::$url_main); die('Function Error'); }
-					} else { url::redirect(config::$url_main); die('Function Error'); }
-                } else { url::redirect(config::$url_main); die('Function Error'); }
+									} else { $this->redirect(config::$url_main); die('Function Error'); }
+								} else {$this->redirect(config::$url_main); die('Function Error'); }
+							} else { $this->redirect(config::$url_main); die('Function Error'); }
+						} else { $this->redirect(config::$url_main); die('Function Error'); }
+					} else { $this->redirect(config::$url_main); die('Function Error'); }
+                } else { $this->redirect(config::$url_main); die('Function Error'); }
             } //ELSE ABOVE
-        } else { url::redirect(config::$url_main); die('Function Error'); }
+        } else { $this->redirect(config::$url_main); die('Function Error'); }
 	}//END
     
 }//END
