@@ -3,12 +3,14 @@ console.log('main.js loaded and working');
 //AJAX TEST
 $(document).ready(function(){
 
+    var counter = 1;
+
     //AJAX CONSOLE LOG ON CLICK
-    $("#ajax_button").click(function(e){
+    $("#ajax").click(function(e){
         e.preventDefault();
         $.ajax({
             type: 'get',
-            url: $('#ajax_button').attr('href'),
+            url: $(this).attr('href'),
             dataType: 'json',
             beforeSend: function(){
                 console.log('ajax send');
@@ -16,6 +18,8 @@ $(document).ready(function(){
             success: function(data){
                 console.log('ajax success');
                 console.log(data);
+                $("#getajax").html("Value from ajax php function: " + data.test + " " + counter);
+                counter += 1;
             },
             error: function(xhr,error,request){
                 console.log('ajax error');
