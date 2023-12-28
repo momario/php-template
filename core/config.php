@@ -2,12 +2,12 @@
 class config {
 
     //GLOBAL
-    public static $project_title = 'Template';
+    public static $project_title = 'php-emplate';
 
     //URL
-    public static $url_folder_name = 'php-template-master';
-    public static $url_main = '/php-template-master/main/home';
-    public static $url_base = '/php-template-master/';
+    public static $url_folder_name = 'php-template';
+    public static $url_main = '/php-template/main/home';
+    public static $url_base = '/php-template/';
 
     //DATABASE
     public static $database_server = 'localhost';

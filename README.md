@@ -1,9 +1,9 @@
 # php-template-master
 
 ## INSTALLATION
-* copy the php-template-master folder into your workspace
+* copy the php-template folder into your workspace
 * run your webserver
-* access the page from your browser: server_name/php-template-master
+* access the page from your browser: server_name/php-template
 
 ## CONFIG
 **/core/config.php**<br />
@@ -20,8 +20,7 @@ to ...
     public static $url_main = '/new_project/main/home';
     public static $url_base = '/new_project/';
 
-### Note:
-Don't forget to rename the project folder!
+> **_Note:_** Don't forget to rename the project folder!
 
 ## DATABASE
 **/core/database.php**<br />
@@ -47,6 +46,6 @@ If a not allowed URL is typed in, it redirects to your `config::$url_main`<br />
 
 ## HTACCESS
 **/.htaccess**<br />
-* page forced to https
 * access to folders denied
 * access to directories denied
+* page forced to https

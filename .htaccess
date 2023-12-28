@@ -13,13 +13,16 @@ RedirectMatch 403 /\..*$
     RewriteRule (.+) index.php?p=$1 [QSA,L]
 
     # FORCE HTTPS
-    RewriteCond %{HTTPS} !on
-    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+    # RewriteCond %{HTTPS} !on
+    # RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
     # DENY ACCESS TO DIRECTORIES
     RewriteRule (^|/)controller(/|$) - [F]
     RewriteRule (^|/)core(/|$) - [F]
+    RewriteRule (^|/)head(/|$) - [F]
+    RewriteRule (^|/)view(/|$) - [F]
+
+    # ALLOW ACCESS TO css and js DIRECTORIES
     #RewriteRule (^|/)css(/|$) - [F]
     #RewriteRule (^|/)js(/|$) - [F]
-    RewriteRule (^|/)view(/|$) - [F]
 </IfModule>
