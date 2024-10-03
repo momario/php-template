@@ -1,18 +1,25 @@
 <?php
-require('core/config.php');
-require('core/url.php');
-require('core/database.php');
+require_once 'core/config.php';
+require_once 'core/url.php';
 
-class app {
+class App {
+    protected Url $url;
 
-	public function run() {
-		$url = new url();
-		$url->run();
-	}//END
+    public function __construct() {
+		$url = new Url();
+        $this->url = $url;
+    }
 
-}//END
+    public function run(): void {
+        try {
+            $this->url->loadRouter();
+        } catch (Exception $e) {
+            http_response_code(500);
+            echo "An error occurred: " . $e->getMessage();
+            error_log($e->getMessage());
+        }
+    }
+}
 
-//RUN THE APPLICATION
-$app = new app();
+$app = new App();
 $app->run();
-?>

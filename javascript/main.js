@@ -1,5 +1,5 @@
 $(document).ready(function(){
 
-    console.log('main.js loaded and ready');
+    console.log('main.js loaded and jQuery ready');
 
 });//END
