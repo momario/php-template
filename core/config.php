@@ -1,18 +1,6 @@
 <?php
 class Config {
 
-    //GLOBAL
-    public static $project_title = 'php-emplate';
-
-    //URL
-    public static $url_folder_name = 'php-template';
-    public static $url_main = '/php-template/main/home';
-    public static $url_base = '/php-template/';
-
-    //PATH
-    public static $path_file = 'file/';
-    public static $path_controller = 'controller/';
-
     // Define string-typed constants for your configuration (PHP 8.1+)
     const PROJECT_TITLE = 'php-template';
 
