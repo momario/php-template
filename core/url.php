@@ -36,9 +36,9 @@ class Url {
 		array_shift($urlSegments);
 	
 		// Ensure that a controller name is provided
+		// If no controller is defined, it redirects to the main controller and function
 		if (!isset($urlSegments[0])) {
-			http_response_code(404); // Not Found
-			echo "Error: No controller specified.";
+			$this->redirect(Config::getConfig('URL_MAIN'));
 			exit();
 		}
 	
