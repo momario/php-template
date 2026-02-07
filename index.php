@@ -1,6 +1,7 @@
 <?php
 require_once 'core/config.php';
 require_once 'core/url.php';
+require_once 'core/view.php';
 
 class App {
     protected Url $url;

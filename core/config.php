@@ -15,9 +15,15 @@ class Config {
     const PATH_CONTROLLER = 'controller/';
     const PATH_VIEW = 'view/';
 
+    const ALLOWED_CONTROLLERS = [
+        'main' => ['home', 'settings']
+    ];
+
+    /* custom urls */
+    const URL_SETTINGS = '/php-template/main/settings';
 
     // Get function to retrieve constants, return type ?string to allow null
-    public static function getConfig(string $key): ?string {
+    public static function getConfig(string $key): mixed {
         // Use ReflectionClass to get constants dynamically
         $reflector = new ReflectionClass(__CLASS__);
         $constants = $reflector->getConstants();

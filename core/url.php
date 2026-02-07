@@ -97,6 +97,18 @@ class Url {
 			echo "Error: Access to private method denied.";
 			exit();
 		}
+
+		$allowed = Config::getConfig('ALLOWED_CONTROLLERS');
+
+		if (!isset($allowed[$controllerName])) {
+			http_response_code(403);
+			exit('Controller not allowed');
+		}
+
+		if (!in_array($methodName, $allowed[$controllerName], true)) {
+			http_response_code(403);
+			exit('Method not allowed');
+		}
 	
 		// Collect any additional parameters
 		$params = array_slice($urlSegments, 2);
